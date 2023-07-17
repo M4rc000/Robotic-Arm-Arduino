@@ -21,17 +21,28 @@
 <div class="container">
   <h1 class="mt-2 mb-5">Movement Control</h1>
 
-  <div class="bg-transparent d-flex justify-content-center align-items-center pb-5 pe-5" style="z-index: 99999; position: absolute; top: 0; bottom: 0; left: 0; right: 0; opacity: 0.1">
+  <div class="bg-transparent d-flex justify-content-center align-items-center pb-5 pe-5" style="position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; opacity: 0.1">
     <img src="../static/img/Robots.png" alt="" />
   </div>
 
-  <form action="" method="post" class="pt-5">
-    <div class="mb-3">
-      <label for="degree" class="form-label">Degree</label>
-      <input type="number" class="form-control" id="degree" name="degree" value="" />
+  <form action="" method="post" class="pt-5" style="z-index: 1">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+      <label class="form-check-label" for="flexRadioDefault1">Left</label>
     </div>
-
-    <button type="submit" class="btn prim text-light">Submit</button>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+      <label class="form-check-label" for="flexRadioDefault2"> Right </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+      <label class="form-check-label" for="flexRadioDefault1">Bottom</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+      <label class="form-check-label" for="flexRadioDefault2"> Claw </label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </form>
 </div>
 
