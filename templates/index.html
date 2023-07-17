@@ -1,0 +1,69 @@
+{% extends 'base.html' %} {% block title %}
+<title>Robotics Final Project</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+<link rel="stylesheet" href="../src/style.css" />
+<link rel="shortcut icon" href="../src/img/arduino-robotic-am-3d-view.ico" type="image/x-icon" />
+<style>
+  body {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-family: 'Lumanosimo', cursive;
+  }
+
+  .prim {
+    background-color: #494ca2;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
+</style>
+
+{% endblock %} {% block body %}
+
+<header>
+  <div class="container">
+    <div class="flex">
+      <h1 class="text-uppercase text-center"><span class="text-primary">Robotic Arm</span> <span class="text-warning"> Arduino </span></h1>
+    </div>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="container mt-5" style="margin-top: 6rem !important">
+    <div class="row justify-content-center mt-5">
+      <div class="col mt-5">
+        <div class="cover-image bg-info-subtle rounded-circle text-center" style="width: 390px; height: 350px; display: flex; justify-content: center; align-items: center; box-shadow: 3px 3px 1px #494ca2">
+          <img src="../static/img/Robots.png" alt="" style="width: 320px" />
+        </div>
+      </div>
+      <div class="col mt-5 pt-5">
+        <button type="button" class="btn prim me-1">
+          <a href="/run" style="color: white; text-decoration: none"> Run Robot </a>
+        </button>
+        <button type="button" class="btn prim">
+          <a href="/reset" style="color: white; text-decoration: none">Reset Position</a>
+        </button>
+        <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" class="mt-5 fs-5">Servo Control</p>
+        <button type="button" class="btn prim me-1">
+          <a href="/move_bottom" style="color: white; text-decoration: none">Move bottom</a>
+        </button>
+        <button type="button" class="btn prim me-1">
+          <a href="/move_right" style="color: white; text-decoration: none">Move right</a>
+        </button>
+        <button type="button" class="btn prim me-1">
+          <a href="/move_claw" style="color: white; text-decoration: none">Move Claw</a>
+        </button>
+        <button type="button" class="btn prim">
+          <a href="/move_left" style="color: white; text-decoration: none">Move Left</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+{% endblock %}
